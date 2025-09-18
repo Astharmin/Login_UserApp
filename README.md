@@ -13,9 +13,8 @@
 ### 🎯 Funcionalidades CRUD
 - ✅ **Crear usuarios** con validación de formularios
 - 📋 **Listar usuarios** en tabla responsive
-- ✏️ **Editar registros** (próximamente)
-- 🗑️ **Eliminar usuarios** (próximamente)
-- 🔍 **Búsqueda y filtros** (en desarrollo)
+- ✏️ **Editar registros** de los usuarios por ID
+- 🗑️ **Eliminar usuarios** para su gestion de registros
 
 ## 🧑‍💻 Clonacion del Proyecto
 ```bash
