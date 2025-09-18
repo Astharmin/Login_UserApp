@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{titulo}}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  </head>
+  <body>
+      <div class="container">
+
+          <!-- Titulo -->
+          <div class="container py-3">
+              <h1 class="display-5 text-center text-primary">
+                  {{titulo}} <i class="bi bi-pc-display"></i>
+              </h1>
+          </div>
+
+          <!-- Grid Principal -->
+          <div class="container-fluid pb-3">
+              <div class="d-grid gap-3" style="grid-template-columns: 1fr 2fr;">
+
+                  <!-- Contenedor Formulario -->
+                <div class="border rounded-3 p-2">
+
+                    <!-- Formulario -->
+                    <form action="/guardar"
+                          method="post"
+                          autocomplete="off">
+                        {{forma.csrf_token}}
+
+                        <!-- Campo Nombre -->
+                        <div class="form-floating py-2">
+<!--                            <input type="text"-->
+<!--                                   class="form-control"-->
+<!--                                   id="nombre"-->
+<!--                                   placeholder="Nombre"/>-->
+<!--                            <label for="nombre">Nombre</label>-->
+                            {{forma.nombre(class="form-control", placeholder="Nombre")}}
+                            {{forma.nombre.label}}
+                        </div>
+
+                        <!-- Campo Apellido -->
+                        <div class="form-floating py-2">
+<!--                            <input type="text"-->
+<!--                                   class="form-control"-->
+<!--                                   id="apellido"-->
+<!--                                   placeholder="Apellido"/>-->
+<!--                            <label for="apellido">Apellido</label>-->
+                            {{forma.apellido(class="form-control", placeholder="Apellido")}}
+                            {{forma.apellido.label}}
+                        </div>
+
+                        <!-- Campo Mail -->
+                        <div class="form-floating py-2">
+<!--                            <input type="text"-->
+<!--                                   class="form-control"-->
+<!--                                   id="mail"-->
+<!--                                   placeholder="Mail"/>-->
+<!--                            <label for="mail">Mail</label>-->
+                            {{forma.mail(class="form-control", placeholder="Mail")}}
+                            {{forma.mail.label}}
+                        </div>
+
+                        <!-- Botones -->
+                        <div class="text-center py-2">
+<!--                            <button type="submit"-->
+<!--                                    class="btn btn-primary btn-sm me-3">-->
+<!--                                Guardar-->
+<!--                            </button>-->
+                            {{forma.guardar(class="btn btn-primary btn-sm me-3")}}
+                            <a href="/Limpiar" class="btn btn-info btn-sm">
+                                Limpiar
+                            </a>
+                        </div>
+                    </form>
+                </div>
+
+                  <!-- Contenedor Lista clientes -->
+                <div class="border rounded-3 p-2">
+                    <!-- Lista clientes -->
+                    <table class="table table-striped table-hover">
+
+                        <thead class="table-info">
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Mail</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {% for cliente in clientes %}
+                            <tr>
+                                <td>{{cliente.id}}</td>
+                                <td>{{cliente.nombre}}</td>
+                                <td>{{cliente.apellido}}</td>
+                                <td>{{cliente.mail}}</td>
+                                <td class="text-center">
+                                    <div>
+                                        <a href="/editar/{{cliente.id}}"
+                                           class="btn btn-primary btn-sm me-3">
+                                            <i class="bi bi-pencil"></i>
+                                        </a>
+                                        <a href="/eliminar/{{cliente.id}}"
+                                           class="btn btn-danger btn-sm">
+                                            <i class="bi bi-trash3"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+              </div>
+          </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>
