@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b8823c9-c4cf-412e-b15f-119e357ed5ef" name="Changes" comment="cambios en el README">
+    <list default="true" id="3b8823c9-c4cf-412e-b15f-119e357ed5ef" name="Changes" comment="preparacion para despliegue">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cliente_form.py" beforeDir="false" afterPath="$PROJECT_DIR$/cliente_form.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,12 +203,21 @@
       <option name="project" value="LOCAL" />
       <updated>1758217452602</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="preparacion para despliegue">
+      <option name="closed" value="true" />
+      <created>1758232355758</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1758232355758</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="agregando metodos de actualizar y limpiar" />
     <MESSAGE value="cambios en el README" />
-    <option name="LAST_COMMIT_MESSAGE" value="cambios en el README" />
+    <MESSAGE value="preparacion para despliegue" />
+    <option name="LAST_COMMIT_MESSAGE" value="preparacion para despliegue" />
   </component>
 </project>
