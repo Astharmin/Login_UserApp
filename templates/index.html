@@ -29,8 +29,11 @@
                           method="post"
                           autocomplete="off">
                         {{forma.csrf_token}}
+                        <!-- Campo hidden -->
+<!--                        <input type="hidden" id="id" value="3"/>-->
 
                         <!-- Campo Nombre -->
+                        {{forma.id()}}
                         <div class="form-floating py-2">
 <!--                            <input type="text"-->
 <!--                                   class="form-control"-->
@@ -70,7 +73,7 @@
 <!--                                Guardar-->
 <!--                            </button>-->
                             {{forma.guardar(class="btn btn-primary btn-sm me-3")}}
-                            <a href="/Limpiar" class="btn btn-info btn-sm">
+                            <a href="/limpiar" class="btn btn-info btn-sm">
                                 Limpiar
                             </a>
                         </div>
