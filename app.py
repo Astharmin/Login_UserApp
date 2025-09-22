@@ -49,6 +49,12 @@ def editar(id):
                            clientes=clientes_db,
                            forma=cliente_form)
 
+@app.route('/eliminar/<int:id>') # localhost:5000/eliminar/1
+def eliminar(id):
+    cliente = Cliente(id=id)
+    ClienteDAO.eliminar(cliente)
+    return redirect(url_for('inicio'))
+
 @app.route('/limpiar')
 def limpiar():
     return redirect(url_for('inicio'))
