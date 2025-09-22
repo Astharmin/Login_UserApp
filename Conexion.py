@@ -1,11 +1,16 @@
+import os
 from mysql.connector import pooling
 from mysql.connector import Error
+from dotenv import load_dotenv
+
+
+load_dotenv()
 
 class Conexion:
-    DATABASE = 'db_userapp'
-    USERNAME = 'root'
-    PASSWORD = 'Th3_S0u1'
-    DB_PORT = '3306'
+    DATABASE = os.getenv('DATABASE')
+    USERNAME = os.getenv('USERNAME')
+    PASSWORD = os.getenv('PASSWORD')
+    DB_PORT = os.getenv('DB_PORT')
     HOST = 'localhost'
     POOL_SIZE = 5
     POOL_NAME = 'login_app_pool'
