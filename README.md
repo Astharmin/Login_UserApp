@@ -5,6 +5,7 @@
 ![Bootstrap](https://img.shields.io/badge/UI-Bootstrap-7952B3?logo=bootstrap&logoColor=white)
 ![MySQL](https://img.shields.io/badge/Database-MySQL-4479A1?logo=mysql&logoColor=white)
 ![DAO](https://img.shields.io/badge/Pattern-DAO-FF6B6B)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 > *"Sistema de registro de usuarios con arquitectura escalable, MySQL y interfaz moderna"*
 
