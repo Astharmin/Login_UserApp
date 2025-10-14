@@ -4,6 +4,7 @@ from Cliente import Cliente
 from Cliente_DAO import ClienteDAO
 from cliente_form import ClienteForm
 
+
 app = Flask(__name__)
 titulo_app = 'Login App'
 
