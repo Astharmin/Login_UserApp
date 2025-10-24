@@ -14,8 +14,11 @@
 
 ## 📸 **Capturas de Pantalla**
 
-### 🖥️ **Vista Principal de la Aplicación**
-![Vista Principal](C:\Users\aaron\PycharmProjects\Login_UserApp\captures\image_6.png)
+### 🏠 **Vista Principal**
+| **Descripción** | **Vista** |
+|-----------------|-----------|
+| **Dashboard principal** con tabla de productos existentes en el sistema | <div align="center"><img src="./captures/image_6.png" width="400" alt="Dashboard Principal"/><br/>*Tabla de productos con ID, descripción, precios y stock*</div> |
+
 
 **Descripción de la Interfaz:**
 - **Panel izquierdo**: Formulario de gestión de clientes con campos para Nombre, Apellido y Mail
