@@ -88,6 +88,17 @@ sistema-clientes-web/
 ```
 
 ---
+## 🔄 **Flujo de Trabajo**
+
+```mermaid
+graph LR
+    A[Formulario] --> B[Validación]
+    B --> C[Base de Datos]
+    C --> D[Tabla Clientes]
+    D --> E[Actualización UI]
+    E --> A
+```
+---
 
 ## 🛠️ **Tecnologías Utilizadas**
 
@@ -244,7 +255,7 @@ class Cliente:
         self.mail = mail
 ```
 
-### 📋 **Ejemplo de Datos (basado en image_6.png)**
+### 📋 **Ejemplo de Datos**
 | ID | Nombre | Apellido | Mail |
 |----|--------|----------|------|
 | 1 | Daniel | Torres | dtorres@mail.com |
@@ -299,14 +310,3 @@ Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE)
 **Desarrollado con ❤️ por [Astharmin](https://github.com/Astharmin)**
 
 ---
-
-## 🔄 **Flujo de Trabajo**
-
-```mermaid
-graph LR
-    A[Formulario] --> B[Validación]
-    B --> C[Base de Datos]
-    C --> D[Tabla Clientes]
-    D --> E[Actualización UI]
-    E --> A
-```
