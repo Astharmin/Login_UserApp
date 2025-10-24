@@ -12,20 +12,33 @@
 
 ---
 
+## 📸 **Capturas de Pantalla**
+
+### 🖥️ **Vista Principal de la Aplicación**
+![Vista Principal](C:\Users\aaron\PycharmProjects\Login_UserApp\captures\image_6.png)
+
+**Descripción de la Interfaz:**
+- **Panel izquierdo**: Formulario de gestión de clientes con campos para Nombre, Apellido y Mail
+- **Panel derecho**: Tabla de clientes registrados con datos de ejemplo
+- **Botones de acción**: "Guardar" y "Limpiar" para gestionar el formulario
+- **Diseño limpio**: Interfaz intuitiva con separación clara de funciones
+
+---
+
 ## 🌟 **Características Principales**
 
 ### 🎨 **Interfaz de Usuario Moderna**
 - ✅ **Diseño responsive** con Bootstrap 5.3
-- 🎯 **Tema oscuro** integrado
+- 🎯 **Tema claro** integrado basado en la imagen
 - 📱 **Interfaz intuitiva** y fácil de usar
-- ⚡ **Navegación fluida** sin recargas
+- ⚡ **Navegación fluida** con funcionalidades CRUD
 
 ### 🔧 **Funcionalidades CRUD Completas**
 - 👥 **Agregar nuevos clientes** con formularios validados
-- 📋 **Listar todos los clientes** en tabla interactiva
-- ✏️ **Editar información** con pre-carga de datos
-- 🗑️ **Eliminar clientes** con confirmación visual
-- 🧹 **Limpiar formularios** rápidamente
+- 📋 **Listar todos los clientes** en tabla estructurada
+- ✏️ **Editar información** de clientes existentes
+- 🗑️ **Eliminar clientes** de forma segura
+- 🧹 **Limpiar formularios** con botón dedicado
 
 ### 🔒 **Seguridad Avanzada**
 - 🛡️ **Configuración cifrada** con variables de entorno
@@ -61,8 +74,13 @@ sistema-clientes-web/
 ├── Conexion.py           # 🔌 Pool de conexiones seguro
 ├── cliente_form.py       # 📝 Formularios WTForms
 ├── requirements.txt      # 📦 Dependencias
+├── captures/            # 📸 Capturas de pantalla
+│   └── image_6.png     # 🖼️ Vista principal
 ├── templates/           # 🎨 Frontend
 │   └── index.html      # 🏠 Página principal
+├── static/             # 🎭 Recursos estáticos
+│   └── css/
+│       └── styles.css # 🎨 Estilos personalizados
 └── README.md           # 📚 Documentación
 ```
 
@@ -79,9 +97,9 @@ sistema-clientes-web/
 
 ### 🎨 Frontend
 - **Bootstrap 5.3** - Framework CSS
-- **Bootstrap Icons** - Iconografía moderna
 - **HTML5** - Estructura semántica
 - **Jinja2** - Motor de templates
+- **CSS3** - Estilos personalizados
 
 ### 🗄️ Base de Datos
 - **MySQL 8.0+** - Base de datos relacional
@@ -104,8 +122,8 @@ mysql --version
 ### ⚡ **Configuración Segura**
 ```bash
 # 1. Clonar repositorio
-git clone https://github.com/Astharmin/login-userapp.git
-cd login-userapp
+git clone https://github.com/Astharmin/sistema-clientes-web.git
+cd sistema-clientes-web
 
 # 2. Crear entorno virtual
 python -m venv venv
@@ -166,23 +184,23 @@ class Conexion:
 
 ## 🎨 **Características de la Interfaz**
 
-### ✨ **Diseño Moderno**
-- **Tema oscuro** por defecto
-- **Grid responsive** de 2 columnas
-- **Tablas con hover effects**
-- **Iconos Bootstrap** integrados
+### ✨ **Diseño Basado en la Captura**
+- **Tema claro** con estructura de dos secciones
+- **Formulario lateral** para entrada de datos (como se ve en image_6.png)
+- **Tabla de datos** para visualización de clientes registrados
+- **Botones de acción** claramente definidos: "Guardar" y "Limpiar"
 
 ### 🔄 **Interacción Intuitiva**
 ```html
-<!-- Formulario con validación -->
-<div class="form-floating py-2">
-    {{forma.nombre(class="form-control", placeholder="Nombre")}}
-    {{forma.nombre.label}}
+<!-- Formulario de cliente (basado en la captura) -->
+<div class="form-group">
+    <label for="nombre">Nombre</label>
+    <input type="text" class="form-control" id="nombre" name="nombre">
 </div>
 
-<!-- Tabla interactiva -->
-<table class="table table-striped table-hover">
-    <thead class="table-info">
+<!-- Tabla de clientes -->
+<table class="table table-striped">
+    <thead>
         <tr>
             <th>ID</th>
             <th>Nombre</th>
@@ -191,6 +209,9 @@ class Conexion:
             <th>Acciones</th>
         </tr>
     </thead>
+    <tbody>
+        <!-- Datos dinámicos de clientes -->
+    </tbody>
 </table>
 ```
 
@@ -205,6 +226,29 @@ class Conexion:
 | `/editar/<id>` | GET | Cargar datos cliente | Validación ID |
 | `/eliminar/<id>` | GET | Eliminar cliente | Validación ID |
 | `/limpiar` | GET | Limpiar formulario | Pública |
+
+---
+
+## 📊 **Estructura de Datos**
+
+### 🎫 **Modelo Cliente**
+```python
+class Cliente:
+    def __init__(self, id=None, nombre="", apellido="", mail=""):
+        self.id = id
+        self.nombre = nombre
+        self.apellido = apellido
+        self.mail = mail
+```
+
+### 📋 **Ejemplo de Datos (basado en image_6.png)**
+| ID | Nombre | Apellido | Mail |
+|----|--------|----------|------|
+| 1 | Daniel | Torres | dtorres@mail.com |
+| 3 | Maria | Melo | mmelo@mail.com |
+| 6 | Juan | Jimenez | jjimenez@mail.com |
+| 7 | Rosa | Meliroso | rmeltroso@mail.com |
+| 8 | Pedro | Melroso | pmeltroso@mail.com |
 
 ---
 
@@ -251,14 +295,15 @@ Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE)
 
 **Desarrollado con ❤️ por [Astharmin](https://github.com/Astharmin)**
 
+---
+
+## 🔄 **Flujo de Trabajo**
+
 ```mermaid
 graph LR
-    A[Flask App] --> B[Pool Seguro]
-    B --> C[MySQL DB]
-    C --> D[.env Config]
-    D --> E[🚀 Producción]
+    A[Formulario] --> B[Validación]
+    B --> C[Base de Datos]
+    C --> D[Tabla Clientes]
+    D --> E[Actualización UI]
+    E --> A
 ```
-
-*"Seguridad desde el diseño, performance desde la arquitectura"*
-
-</div>
